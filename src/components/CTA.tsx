@@ -1,31 +1,43 @@
 import { Link as ChakraLink, Button } from '@chakra-ui/react'
-
 import { Container } from './Container'
+import { ethers } from 'ethers'
 
 export const CTA = () => (
   <Container
+    justifyContent="center"
+    alignItems="center"
     flexDirection="row"
-    position="fixed"
+    position="relative"
     bottom="0"
     width="100%"
-    maxWidth="48rem"
-    py={3}
   >
-    <ChakraLink isExternal href="https://chakra-ui.com" flexGrow={1} mx={2}>
-      <Button width="100%" variant="outline" colorScheme="green">
-        chakra-ui
-      </Button>
-    </ChakraLink>
-
-    <ChakraLink
-      isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
-      flexGrow={3}
-      mx={2}
+    <Button 
+      width="33%" 
+      variant="solid"  
+      colorScheme="pink"
+      onClick={requestAccount}
     >
-      <Button width="100%" variant="solid" colorScheme="green">
-        View Repo
-      </Button>
-    </ChakraLink>
+      View Score
+    </Button>
+
   </Container>
 )
+
+async function requestAccount() {
+  if ((window as any)['ethereum']) {
+    try {
+      // Request account access if needed
+      let res = await (window as any)['ethereum'].enable()
+      console.log(res)
+      const provider = new ethers.providers.Web3Provider((window as any)['ethereum'])
+      const signer = provider.getSigner()
+      console.log(signer)
+    } catch (error) {
+      // User denied account access
+      throw new Error('User denied account access.')
+    }
+  } else {
+    // No wallet found
+    throw new Error('No wallet found.')
+  }
+}

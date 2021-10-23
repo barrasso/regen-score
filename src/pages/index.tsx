@@ -1,4 +1,5 @@
 import {
+  Flex,
   Link as ChakraLink,
   Text,
   Code,
@@ -19,37 +20,23 @@ const Index = () => (
   <Container height="100vh">
     <Hero />
     <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>typescript</Code>.
-      </Text>
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text>
+          Turning <Code>Degens</Code> into <Code>Regens</Code> since 2021.
+        </Text>
+      </Flex>
 
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
+      <CTA />
+
     </Main>
 
     <DarkModeSwitch />
     <Footer>
-      <Text>Next ❤️ Chakra</Text>
+      <Text>Made With ❤️ in Lisboa 🇵🇹</Text>
     </Footer>
-    <CTA />
   </Container>
 )
 
