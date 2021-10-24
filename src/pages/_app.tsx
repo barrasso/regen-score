@@ -7,7 +7,7 @@ import WalletConnectContextProvider from "../contexts/walletconnect";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: "https://api.studio.thegraph.com/query/12361/regen-score/0.0.2",
+  uri: "https://api.studio.thegraph.com/query/12361/regen-score/0.0.5",
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -38,7 +38,7 @@ export default function RegenScoreList({ address }: RegenScoreProps) {
       <ul>
         <RegenScoreItem name="Vitalik" isWhale={true} />
         {/* iterate over data with data.map(x => <RegenScoreItem name={x.address} isWhale={x.isWhale} /> */}
-        {data}
+        {/* {data} */}
       </ul>
     </div>
   );

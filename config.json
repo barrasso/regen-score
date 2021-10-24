@@ -5,7 +5,12 @@
       {
         "address": "0x3a3A65aAb0dd2A17E3F1947bA16138cd37d08c04",
         "startBlock": 9242322,
-        "module": "erc20"
+        "module": "aeth"
+      },
+      {
+        "address": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+        "startBlock": 9242322,
+        "module": "gtc"
       }
     ]
   }
