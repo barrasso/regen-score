@@ -9,6 +9,7 @@
     "codegen": "graph codegen"
   },
   "dependencies": {
+    "@apollo/client": "^3.4.16",
     "@chakra-ui/icons": "^1.0.5",
     "@chakra-ui/react": "^1.4.2",
     "@chakra-ui/theme-tools": "1.1.2",
@@ -17,8 +18,10 @@
     "@graphprotocol/graph-cli": "^0.22.4",
     "@graphprotocol/graph-ts": "^0.22.1",
     "@openzeppelin/subgraphs": "^0.1.4",
+    "@walletconnect/client": "^2.0.0-beta.19",
     "ethers": "^5.5.1",
     "framer-motion": "^4.0.3",
+    "graphql": "^15.6.1",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
