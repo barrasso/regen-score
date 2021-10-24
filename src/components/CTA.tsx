@@ -1,9 +1,12 @@
 import { Link as ChakraLink, Button } from '@chakra-ui/react'
 import { Container } from './Container'
 
-interface CTAprops{onClick: () => void, setAbsolved: boolean}
+interface CTAProps{
+  onClick: () => void, 
+  setAbsolved: boolean
+}
 
-export const CTA = ({onClick, setAbsolved}: CTAprops) => (
+export const CTA = ({ onClick, setAbsolved }: CTAProps) => (
   <Container
     justifyContent="center"
     alignItems="center"
