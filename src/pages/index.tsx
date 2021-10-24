@@ -39,8 +39,21 @@ const Index = () => {
     console.log(await signer.getAddress())
     const signature = await signer.signMessage('I hereby absolve myself of my degeneracy.')
     console.log(signature)
+    if (signature) {
+      setAbsolved(true)
 
-    setAbsolved(true)
+      // Start loading animation...
+
+
+      // Fetch Ethereum data, calculate score, and show it.
+
+
+      // Hardcode fake Vitalk score at the top of the leaderboard for the lulz. 
+      // He's the ultimate altruist -> 999 points for the SHIB burn.
+      
+
+
+    }
   }
 
   return (
