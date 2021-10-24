@@ -7,7 +7,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { ethers } from "ethers";
-import RegenScore from "../components/RegenScore";
+import RegenScoreList from "../components/RegenScore/RegenScoreList";
 import { WalletConnectContext } from "../contexts/walletconnect";
 
 const ethereum = () => {
@@ -46,7 +46,6 @@ const Index = () => {
       "I hereby absolve myself of my degeneracy."
     );
     console.log(signature);
-
     setAbsolved(true);
   }
 
@@ -64,7 +63,7 @@ const Index = () => {
           </Text>
 
           <CTA setAbsolved={absolved} onClick={requestAccount} />
-          {absolved && <RegenScore address={userAddress} />}
+          {absolved && <RegenScoreList address={userAddress} />}
         </Flex>
       </Main>
 
