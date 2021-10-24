@@ -17,6 +17,7 @@ const ethereum = () => {
 const Index = () => {
   const [absolved, setAbsolved] = useState(false);
   const [userAddress, setUserAddress] = useState("");
+  // TODO activate walletconnect when wss relayserver is back online
   const context = useContext(WalletConnectContext);
 
   async function requestAccount() {
